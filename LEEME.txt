@@ -1,0 +1,32 @@
+EL CIELO Y LOS PAISAJES — Diccionario digital interactivo
+====================================================================
+
+FLUJO:  PORTADA  →  NUBE · LLUVIA · RAYO · ISLA · OASIS  →  JUEGO  →  FINAL
+
+CÓMO ABRIRLO
+  Abre index.html en el navegador (o sube la carpeta a cualquier hosting).
+  No necesita instalación.
+
+LECCIÓN
+  La voz dice:  NUBE. (pausa) es blanca, esponjosa y flota en el cielo. (pausa) Miro la nube pasar despacito.
+  La pausa se cambia con PAUSE_MS al inicio de js/main.js (900 = casi 1 segundo).
+
+JUEGO
+  Pregunta directa: "¿Dónde está la nube?"  Se toca el video correcto.
+
+DÓNDE VA CADA ARCHIVO
+  assets/video/portada.mp4          Video de portada (en bucle, sin sonido)
+  assets/img/portada.jpg            Imagen de respaldo si no hay portada.mp4
+  assets/video/nube.mp4             Video de la lección (4:3, 960x720, sin audio)
+  assets/video/nube_card.mp4        Video del juego (cuadrado, 480x480, liviano)
+  ... lo mismo para: lluvia, rayo, isla, oasis
+
+  Si falta el video de una palabra, esa palabra se omite automáticamente.
+
+CAMBIAR / AGREGAR PALABRAS
+  Todo está en la lista ITEMS al inicio de js/main.js
+  (palabra, emoji, color, definición, frase, pregunta y respuesta del juego, videos).
+
+PREPARAR VIDEOS (opcional, requiere ffmpeg)
+  ./preparar_videos.sh mi_video.mp4 nube
+  Genera nube.mp4 (960x720) y nube_card.mp4 (480x480), sin audio.
